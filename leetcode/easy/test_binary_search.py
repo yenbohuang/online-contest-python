@@ -49,7 +49,7 @@ class Solution(object):
         
         return answer
 
-class TestBinarySearch(unittest.TestCase):
+class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()

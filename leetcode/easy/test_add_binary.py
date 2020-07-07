@@ -29,7 +29,7 @@ class Solution(object):
         return answer[::-1]
 
 
-class TestAddBinary(unittest.TestCase):
+class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()

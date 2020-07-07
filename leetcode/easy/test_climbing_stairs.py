@@ -30,7 +30,7 @@ class Solution(object):
 
         return steps[n]
 
-class TestClimbingStairs(unittest.TestCase):
+class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
