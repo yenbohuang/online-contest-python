@@ -19,12 +19,8 @@ class Solution(object):
         elif n == 2:
             return 2
 
-        steps = []
+        steps = [0, 1, 2]
         
-        steps.append(0)
-        steps.append(1)
-        steps.append(2)
-
         for i in range(3, n + 1):
             steps.append(steps[i - 1] + steps[i - 2])
 
