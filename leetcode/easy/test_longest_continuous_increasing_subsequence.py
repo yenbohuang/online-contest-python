@@ -57,5 +57,5 @@ class TestSolution(unittest.TestCase):
             self.solution.findLengthOfLCIS([2,2,2,2,2]), \
             1)
     
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()

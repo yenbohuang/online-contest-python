@@ -23,5 +23,5 @@ class TestSolution(unittest.TestCase):
             self.solution.lengthOfLastWord("Hello World"), \
             5)
     
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()
