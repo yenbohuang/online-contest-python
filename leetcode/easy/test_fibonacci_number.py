@@ -8,10 +8,8 @@ class Solution(object):
         :type N: int
         :rtype: int
         """
-        if N == 0:
-            return 0
-        elif N == 1:
-            return 1
+        if N <= 1:
+            return N
 		
         array = [0, 1]
 		

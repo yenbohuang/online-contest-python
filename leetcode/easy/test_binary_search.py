@@ -17,7 +17,7 @@ class Solution(object):
                 answer = 0
         elif target == nums[0]:
             answer = 0
-        elif target == nums[numsLength - 1]:
+        elif target == nums[-1]:
             answer = numsLength - 1
         else:
             start = 0

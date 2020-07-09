@@ -26,7 +26,7 @@ class Solution(object):
                     tmp += str(count) + answer[j - 1]
                     count = 1
             
-            answer = tmp + str(count) + answer[answerLength - 1]
+            answer = tmp + str(count) + answer[-1]
         
         return answer
 

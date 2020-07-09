@@ -24,7 +24,7 @@ class Solution(object):
         
         while (increment > 0):
             answer += str(increment % 2)
-            increment = increment // 2
+            increment //= 2
         
         return answer[::-1]
 

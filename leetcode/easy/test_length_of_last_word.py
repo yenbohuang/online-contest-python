@@ -8,13 +8,7 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        answer = 0
-		
-        if len(s.strip()) > 0:
-            tokens = s.strip().split(" ")
-            answer = len(tokens[len(tokens) - 1])
-		
-        return answer
+        return len(s.strip().split(" ")[-1])
 
 class TestSolution(unittest.TestCase):
 
