@@ -11,18 +11,18 @@ class Solution(object):
         """
         maxValue = -sys.maxsize
         numsLength = len(nums)
-		
+        
         for i in range(numsLength):
-			
+            
             sumValue = 0
-			
+            
             for j in range (i, numsLength):
-				
+                
                 sumValue += nums[j]
-				
+                
                 if sumValue > maxValue:
                     maxValue = sumValue
-		
+        
         return maxValue
         
 class TestSolution(unittest.TestCase):
