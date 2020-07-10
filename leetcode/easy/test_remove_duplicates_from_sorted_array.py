@@ -31,14 +31,10 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.removeDuplicates([1,1,2]), \
-            2)
+        self.assertEqual(self.solution.removeDuplicates([1,1,2]), 2)
 
     def test_case_2(self):
-        self.assertEqual( \
-            self.solution.removeDuplicates([1,1,2,2,3,3]), \
-            3)
+        self.assertEqual(self.solution.removeDuplicates([1,1,2,2,3,3]), 3)
 
     def test_case_3(self):
         self.assertEqual( \
@@ -46,9 +42,7 @@ class TestSolution(unittest.TestCase):
             38)
 
     def test_case_4(self):
-        self.assertEqual( \
-            self.solution.removeDuplicates([0,0,1,1,1,2,2,3,3,4]), \
-            5)
+        self.assertEqual(self.solution.removeDuplicates([0,0,1,1,1,2,2,3,3,4]), 5)
     
 if __name__ == '__main__':
     unittest.main()

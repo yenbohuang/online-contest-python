@@ -19,9 +19,7 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.lengthOfLastWord("Hello World"), \
-            5)
+        self.assertEqual(self.solution.lengthOfLastWord("Hello World"), 5)
     
 if __name__ == '__main__':
     unittest.main()

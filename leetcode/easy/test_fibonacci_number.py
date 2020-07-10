@@ -27,29 +27,19 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.fib(1), \
-            1)
+        self.assertEqual(self.solution.fib(1), 1)
     
     def test_case_2(self):
-        self.assertEqual( \
-            self.solution.fib(2), \
-            1)
+        self.assertEqual(self.solution.fib(2), 1)
 
     def test_case_3(self):
-        self.assertEqual( \
-            self.solution.fib(3), \
-            2)
+        self.assertEqual(self.solution.fib(3), 2)
 
     def test_case_4(self):
-        self.assertEqual( \
-            self.solution.fib(4), \
-            3)
+        self.assertEqual(self.solution.fib(4), 3)
 
     def test_case_5(self):
-        self.assertEqual( \
-            self.solution.fib(0), \
-            0)
+        self.assertEqual(self.solution.fib(0), 0)
 
 if __name__ == '__main__':
     unittest.main()

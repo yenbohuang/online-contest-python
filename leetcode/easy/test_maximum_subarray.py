@@ -34,19 +34,13 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.maxSubArray([-2,2,-3,4,-1,2,1,-5,3]), \
-            6)
+        self.assertEqual(self.solution.maxSubArray([-2,2,-3,4,-1,2,1,-5,3]), 6)
     
     def test_case_2(self):
-        self.assertEqual( \
-            self.solution.maxSubArray([-2,1,-3,4,-1,2,1,-5,4]), \
-            6)
+        self.assertEqual(self.solution.maxSubArray([-2,1,-3,4,-1,2,1,-5,4]), 6)
 
     def test_case_3(self):
-        self.assertEqual( \
-            self.solution.maxSubArray([-2147483647]), \
-            -2147483647)
+        self.assertEqual(self.solution.maxSubArray([-2147483647]), -2147483647)
 
 if __name__ == '__main__':
     unittest.main()

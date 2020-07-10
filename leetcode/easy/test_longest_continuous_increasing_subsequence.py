@@ -38,24 +38,16 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.findLengthOfLCIS([]), \
-            0)
+        self.assertEqual(self.solution.findLengthOfLCIS([]), 0)
 
     def test_case_2(self):
-        self.assertEqual( \
-            self.solution.findLengthOfLCIS([1]), \
-            1)
+        self.assertEqual(self.solution.findLengthOfLCIS([1]), 1)
 
     def test_case_3(self):
-        self.assertEqual( \
-            self.solution.findLengthOfLCIS([1,3,5,4,7]), \
-            3)
+        self.assertEqual(self.solution.findLengthOfLCIS([1,3,5,4,7]), 3)
 
     def test_case_4(self):
-        self.assertEqual( \
-            self.solution.findLengthOfLCIS([2,2,2,2,2]), \
-            1)
+        self.assertEqual(self.solution.findLengthOfLCIS([2,2,2,2,2]), 1)
     
 if __name__ == '__main__':
     unittest.main()

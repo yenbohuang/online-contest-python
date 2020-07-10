@@ -39,29 +39,19 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.countAndSay(1), \
-            "1")
+        self.assertEqual(self.solution.countAndSay(1), "1")
 
     def test_case_2(self):
-        self.assertEqual( \
-            self.solution.countAndSay(2), \
-            "11")
+        self.assertEqual(self.solution.countAndSay(2), "11")
 
     def test_case_3(self):
-        self.assertEqual( \
-            self.solution.countAndSay(3), \
-            "21")
+        self.assertEqual(self.solution.countAndSay(3), "21")
 
     def test_case_4(self):
-        self.assertEqual( \
-            self.solution.countAndSay(4), \
-            "1211")
+        self.assertEqual(self.solution.countAndSay(4), "1211")
 
     def test_case_5(self):
-        self.assertEqual( \
-            self.solution.countAndSay(5), \
-            "111221")
+        self.assertEqual(self.solution.countAndSay(5), "111221")
 
 if __name__ == '__main__':
     unittest.main()

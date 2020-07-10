@@ -31,9 +31,7 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.climbStairs(3), \
-            3)
+        self.assertEqual(self.solution.climbStairs(3), 3)
 
 if __name__ == '__main__':
     unittest.main()

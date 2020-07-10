@@ -38,9 +38,7 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.addBinary("11", "1"), \
-            "100")
+        self.assertEqual(self.solution.addBinary("11", "1"), "100")
     
     def test_case_2(self):
         self.assertEqual( \

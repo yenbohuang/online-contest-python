@@ -29,24 +29,16 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.searchInsert([1,3,5,6], 5), \
-            2)
+        self.assertEqual(self.solution.searchInsert([1,3,5,6], 5), 2)
 
     def test_case_2(self):
-        self.assertEqual( \
-            self.solution.searchInsert([1,3,5,6], 2), \
-            1)
+        self.assertEqual(self.solution.searchInsert([1,3,5,6], 2), 1)
 
     def test_case_3(self):
-        self.assertEqual( \
-            self.solution.searchInsert([1,3,5,6], 7), \
-            4)
+        self.assertEqual(self.solution.searchInsert([1,3,5,6], 7), 4)
 
     def test_case_4(self):
-        self.assertEqual( \
-            self.solution.searchInsert([1,3,5,6], 0), \
-            0)
+        self.assertEqual(self.solution.searchInsert([1,3,5,6], 0), 0)
 
 if __name__ == '__main__':
     unittest.main()

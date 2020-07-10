@@ -67,19 +67,13 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.romanToInt("IV"), \
-            4)
+        self.assertEqual(self.solution.romanToInt("IV"), 4)
 
     def test_case_2(self):
-        self.assertEqual( \
-            self.solution.romanToInt("XXI"), \
-            21)
+        self.assertEqual(self.solution.romanToInt("XXI"), 21)
 
     def test_case_3(self):
-        self.assertEqual( \
-            self.solution.romanToInt("XCIX"), \
-            99)
+        self.assertEqual(self.solution.romanToInt("XCIX"), 99)
 
 if __name__ == '__main__':
     unittest.main()
