@@ -9,12 +9,6 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        sLength = len(s)
-        tLength = len(t)
-
-        if sLength != tLength:
-            return False
-        
         return sorted(s) == sorted(t)
         
 class TestSolution(unittest.TestCase):
