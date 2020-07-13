@@ -1,5 +1,6 @@
 # Use relative import: https://docs.python.org/2.5/whatsnew/pep-328.html
-# for example: "from ...leetcode_data_model import ListNode" in "leetcode.easy.linkedList.*"
+# for example:
+# "from ...leetcode_data_model import ListNode" in "leetcode.easy.linkedList.*"
 
 # Definition for singly-linked list.
 class ListNode(object):
@@ -13,7 +14,7 @@ class ListNode(object):
         cursor = self
         value = str(self.val)
 
-        while cursor.next != None:
+        while cursor.next is not None:
             value += "->" + str(cursor.next.val)
             cursor = cursor.next
 
