@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def isPowerOfTwo(self, n):
         """
@@ -19,11 +20,12 @@ class Solution(object):
 
         return False
 
+
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
@@ -47,6 +49,7 @@ class TestSolution(unittest.TestCase):
 
     def test_case_7(self):
         self.assertFalse(self.solution.isPowerOfTwo(218))
-    
+
+
 if __name__ == '__main__':
     unittest.main()

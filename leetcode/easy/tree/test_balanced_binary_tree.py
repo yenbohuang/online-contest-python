@@ -3,6 +3,7 @@
 import unittest
 from ...leetcode_data_model import TreeNode
 
+
 class Solution(object):
 
     __balanced = True
@@ -12,42 +13,43 @@ class Solution(object):
         :type root: TreeNode
         :rtype: bool
         """
-        if root == None:
+        if root is None:
             return True
-        
+
         self.__findNode(root, 1)
-        
+
         return self.__balanced
-    
+
     def __findNode(self, node, depth):
         """
         :type node: TreeNode
         :type depth: int
         :rtype: int
         """
-        
-        if node.left == None and node.right == None:
+
+        if node.left is None and node.right is None:
             return depth
-        
+
         leftDepth = depth
         rightDepth = depth
-        
-        if node.left != None:
+
+        if node.left is not None:
             leftDepth = self.__findNode(node.left, depth + 1)
-        
-        if node.right != None:
+
+        if node.right is not None:
             rightDepth = self.__findNode(node.right, depth + 1)
-        
+
         if abs(rightDepth - leftDepth) > 1:
             self.__balanced = False
-        
-        return max(rightDepth , leftDepth)
-        
+
+        return max(rightDepth, leftDepth)
+
+
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
@@ -58,16 +60,16 @@ class TestSolution(unittest.TestCase):
         root.right = TreeNode(20)
         root.right.left = TreeNode(15)
         root.right.right = TreeNode(7)
-        
+
         self.assertTrue(self.solution.isBalanced(root))
-    
+
     def test_case_2(self):
 
         root = TreeNode(3)
         root.right = TreeNode(20)
         root.right.left = TreeNode(15)
         root.right.right = TreeNode(7)
-        
+
         self.assertFalse(self.solution.isBalanced(root))
 
     def test_case_3(self):
@@ -91,8 +93,9 @@ class TestSolution(unittest.TestCase):
         root.right.right.left = TreeNode(14)
         root.right.right.right = TreeNode(15)
         root.left.left.left.left = TreeNode(16)
-        
+
         self.assertTrue(self.solution.isBalanced(root))
+
 
 if __name__ == '__main__':
     unittest.main()

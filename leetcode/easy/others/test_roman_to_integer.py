@@ -8,7 +8,7 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        if s == None or len(s) == 0:
+        if s is None or len(s) == 0:
             raise Exception("Invalid s: " + s)
 		
         tmp = s

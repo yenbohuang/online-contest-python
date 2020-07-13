@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def reverse(self, x):
         """
@@ -17,7 +18,7 @@ class Solution(object):
 
         if isNegative:
             x = -x
-		
+
         newList = []
 
         while x > 0:
@@ -39,28 +40,30 @@ class Solution(object):
         else:
             if answer > maxInteger:
                 return 0
-        
+
         return answer
+
 
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
     def test_case_1(self):
         self.assertEqual(self.solution.reverse(123), 321)
-    
+
     def test_case_2(self):
         self.assertEqual(self.solution.reverse(-123), -321)
 
     def test_case_3(self):
         self.assertEqual(self.solution.reverse(120), 21)
-    
+
     def test_case_4(self):
         self.assertEqual(self.solution.reverse(1534236469), 0)
-    
+
+
 if __name__ == '__main__':
     unittest.main()

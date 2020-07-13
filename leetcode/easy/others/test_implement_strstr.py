@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def strStr(self, haystack, needle):
         """
@@ -9,7 +10,7 @@ class Solution(object):
         :type needle: str
         :rtype: int
         """
-        if haystack == None or needle == None:
+        if haystack is None or needle is None:
             return -1
 
         haystackLength = len(haystack)
@@ -34,35 +35,36 @@ class Solution(object):
                     if needle[j] != haystack[i + j]:
                         exactMatch = False
                         break
-				
+
                 if exactMatch:
                     return i
-			
+
             if haystackLength - i - 1 < needleLength:
                 break
 
         return -1
 
+
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
     def test_case_1(self):
         self.assertEqual(self.solution.strStr("source", "target"), -1)
-    
+
     def test_case_2(self):
         self.assertEqual(self.solution.strStr("abcdabcdefg", "bcd"), 1)
-    
+
     def test_case_3(self):
         self.assertEqual(self.solution.strStr("", ""), 0)
-    
+
     def test_case_4(self):
         self.assertEqual(self.solution.strStr("a", ""), 0)
-    
+
     def test_case_5(self):
         self.assertEqual(self.solution.strStr("hello", "ll"), 2)
 
@@ -77,6 +79,7 @@ class TestSolution(unittest.TestCase):
 
     def test_case_9(self):
         self.assertEqual(self.solution.strStr("mississippi", "pi"), 9)
+
 
 if __name__ == '__main__':
     unittest.main()

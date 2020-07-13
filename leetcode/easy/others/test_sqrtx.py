@@ -5,6 +5,7 @@
 
 import unittest
 
+
 class Solution(object):
     def mySqrt(self, x):
         """
@@ -12,16 +13,16 @@ class Solution(object):
         :rtype: int
         """
         res = 0
-        bit = 1 << 30 # The second-to-top bit is set: 1 << 30 for 32 bits
+        bit = 1 << 30  # The second-to-top bit is set: 1 << 30 for 32 bits
 
         # "bit" starts at the highest power of four <= the argument.
         while bit > x:
             bit >>= 2
-	 
+
         while bit != 0:
             if x >= res + bit:
-	            x -= res + bit
-	            res = (res >> 1) + bit
+                x -= res + bit
+                res = (res >> 1) + bit
             else:
                 res >>= 1
 
@@ -29,11 +30,12 @@ class Solution(object):
 
         return res
 
+
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
@@ -57,6 +59,7 @@ class TestSolution(unittest.TestCase):
 
     def test_case_7(self):
         self.assertEqual(self.solution.mySqrt(8), 2)
+
 
 if __name__ == '__main__':
     unittest.main()

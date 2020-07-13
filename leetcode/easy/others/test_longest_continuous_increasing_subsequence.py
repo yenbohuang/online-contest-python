@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def findLengthOfLCIS(self, nums):
         """
@@ -10,30 +11,31 @@ class Solution(object):
         """
         answer = 1
         numsLength = len(nums)
-		
+
         if numsLength < 2:
             answer = numsLength
         else:
-			
+
             tmp = 1
-			
+
             for i in range(numsLength - 1):
-				
+
                 if nums[i + 1] > nums[i]:
                     tmp += 1
                 else:
                     tmp = 1
-				
+
                 if tmp > answer:
                     answer = tmp
-		
+
         return answer
+
 
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
@@ -44,10 +46,11 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(self.solution.findLengthOfLCIS([1]), 1)
 
     def test_case_3(self):
-        self.assertEqual(self.solution.findLengthOfLCIS([1,3,5,4,7]), 3)
+        self.assertEqual(self.solution.findLengthOfLCIS([1, 3, 5, 4, 7]), 3)
 
     def test_case_4(self):
-        self.assertEqual(self.solution.findLengthOfLCIS([2,2,2,2,2]), 1)
-    
+        self.assertEqual(self.solution.findLengthOfLCIS([2, 2, 2, 2, 2]), 1)
+
+
 if __name__ == '__main__':
     unittest.main()

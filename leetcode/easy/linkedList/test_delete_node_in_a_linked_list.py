@@ -3,6 +3,7 @@
 import unittest
 from ...leetcode_data_model import ListNode
 
+
 class Solution(object):
     def deleteNode(self, node):
         """
@@ -11,12 +12,13 @@ class Solution(object):
         """
         node.val = node.next.val
         node.next = node.next.next
-        
+
+
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
@@ -26,11 +28,12 @@ class TestSolution(unittest.TestCase):
         root.next = ListNode(2)
         root.next.next = ListNode(3)
         root.next.next.next = ListNode(4)
-        
+
         self.assertEqual(str(root), "1->2->3->4")
-        
+
         self.solution.deleteNode(root.next.next)
         self.assertEqual(str(root), "1->2->4")
+
 
 if __name__ == '__main__':
     unittest.main()

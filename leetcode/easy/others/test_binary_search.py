@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def search(self, nums, target):
         """
@@ -46,36 +47,38 @@ class Solution(object):
                     start = mid
                 else:
                     end = mid
-        
+
         return answer
+
 
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
     def test_case_1(self):
-        self.assertEqual( \
-            self.solution.search([3], 3), \
+        self.assertEqual(
+            self.solution.search([3], 3),
             0)
 
     def test_case_2(self):
-        self.assertEqual( \
-            self.solution.search([1, 2, 3, 3, 4, 5, 10], 6), \
+        self.assertEqual(
+            self.solution.search([1, 2, 3, 3, 4, 5, 10], 6),
             -1)
 
     def test_case_3(self):
-        self.assertEqual( \
-            self.solution.search([1, 2, 3, 3, 4, 5, 10], 3), \
+        self.assertEqual(
+            self.solution.search([1, 2, 3, 3, 4, 5, 10], 3),
             2)
 
     def test_case_4(self):
-        self.assertEqual( \
-            self.solution.search([2,5], 5), \
+        self.assertEqual(
+            self.solution.search([2, 5], 5),
             1)
+
 
 if __name__ == '__main__':
     unittest.main()

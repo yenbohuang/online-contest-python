@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def countAndSay(self, n):
         """
@@ -9,15 +10,15 @@ class Solution(object):
         :rtype: str
         """
         answer = "1"
-        
+
         for i in range(1, n):
-            
+
             tmp = ""
             count = 0
             answerLength = len(answer)
-            
+
             for j in range(answerLength):
-                
+
                 if j == 0:
                     count = 1
                 elif answer[j] == answer[j - 1]:
@@ -25,16 +26,17 @@ class Solution(object):
                 else:
                     tmp += str(count) + answer[j - 1]
                     count = 1
-            
+
             answer = tmp + str(count) + answer[-1]
-        
+
         return answer
+
 
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
@@ -52,6 +54,7 @@ class TestSolution(unittest.TestCase):
 
     def test_case_5(self):
         self.assertEqual(self.solution.countAndSay(5), "111221")
+
 
 if __name__ == '__main__':
     unittest.main()

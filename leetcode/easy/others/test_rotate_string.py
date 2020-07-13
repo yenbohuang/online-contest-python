@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def rotateString(self, A, B):
         """
@@ -18,7 +19,7 @@ class Solution(object):
             for i in range(length):
 
                 target = A[i]
-				
+
                 index = B.find(target)
 
                 while index != -1:
@@ -32,14 +33,15 @@ class Solution(object):
                         index = B.find(target, index + 1)
                     else:
                         break
-		
+
         return False
+
 
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
@@ -51,6 +53,7 @@ class TestSolution(unittest.TestCase):
 
     def test_case_3(self):
         self.assertTrue(self.solution.rotateString("", ""))
+
 
 if __name__ == '__main__':
     unittest.main()

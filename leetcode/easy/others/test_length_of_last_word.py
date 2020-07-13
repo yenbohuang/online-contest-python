@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def lengthOfLastWord(self, s):
         """
@@ -10,16 +11,18 @@ class Solution(object):
         """
         return len(s.strip().split(" ")[-1])
 
+
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
     def test_case_1(self):
         self.assertEqual(self.solution.lengthOfLastWord("Hello World"), 5)
-    
+
+
 if __name__ == '__main__':
     unittest.main()

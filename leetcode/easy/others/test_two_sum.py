@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -19,20 +20,22 @@ class Solution(object):
                     return [i, j]
 
         return None
-        
+
+
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
     def test_case_1(self):
-        self.assertEqual(self.solution.twoSum([2, 7, 11, 15], 9), [0,1])
-    
+        self.assertEqual(self.solution.twoSum([2, 7, 11, 15], 9), [0, 1])
+
     def test_case_2(self):
-        self.assertEqual(self.solution.twoSum([2,5,5,11], 10), [1,2])
+        self.assertEqual(self.solution.twoSum([2, 5, 5, 11], 10), [1, 2])
+
 
 if __name__ == '__main__':
     unittest.main()

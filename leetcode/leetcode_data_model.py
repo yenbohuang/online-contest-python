@@ -7,19 +7,21 @@ class ListNode(object):
 
         self.val = x
         self.next = None
-    
+
     def __str__(self):
 
         cursor = self
         value = str(self.val)
-        
+
         while cursor.next != None:
             value += "->" + str(cursor.next.val)
             cursor = cursor.next
-        
+
         return value
 
 # Definition for a binary tree node.
+
+
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
         self.val = val
