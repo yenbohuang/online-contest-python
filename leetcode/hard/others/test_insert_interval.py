@@ -14,9 +14,7 @@ class Solution(object):
         result = list(list())
 
         intervalsLength = 0
-        if intervals is None:
-            intervalsLength = 0
-        else:
+        if intervals is not None:
             intervalsLength = len(intervals)
 
         if intervalsLength == 0:
@@ -49,7 +47,9 @@ class Solution(object):
                         result.append(newInterval)
 
                 elif i[1] < newInterval[0]:
+
                     result.append(i)
+
                 else:
 
                     if newInterval not in result:
