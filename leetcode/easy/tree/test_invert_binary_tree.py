@@ -35,6 +35,7 @@ class TestSolution(unittest.TestCase):
         pass
 
     def test_case_1(self):
+
         root = TreeNode(1)
         root.left = TreeNode(2)
         root.right = TreeNode(3)
