@@ -32,7 +32,7 @@ class Solution(object):
             if i[0] in noIncomingEdgeList:
                 noIncomingEdgeList.remove(i[0])
 
-        while len(noIncomingEdgeList) > 0:
+        while noIncomingEdgeList:
 
             n = noIncomingEdgeList[0]
             sortedArrayList.append(n)

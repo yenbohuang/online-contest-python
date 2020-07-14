@@ -10,7 +10,7 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        if (nums is None) or (len(nums) == 0) or (nums[0] >= target):
+        if (nums is None) or (not nums) or (nums[0] >= target):
             return 0
 
         numsLength = len(nums)

@@ -9,7 +9,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if (nums is None) or (len(nums) == 0):
+        if nums is None or not nums:
             return 0
 
         singleIntegers = {nums[0]}
@@ -23,7 +23,7 @@ class Solution(object):
             elif False == (nums[i] in multipleIntegers):
                 singleIntegers.add(nums[i])
 
-        if len(singleIntegers) == 0:
+        if not singleIntegers:
             return 0
         else:
             return singleIntegers.pop()
