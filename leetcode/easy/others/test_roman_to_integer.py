@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class Solution(object):
     def romanToInt(self, s):
         """
@@ -10,7 +11,7 @@ class Solution(object):
         """
         if s is None or len(s) == 0:
             raise Exception("Invalid s: " + s)
-		
+
         tmp = s
         answer = 0
 
@@ -55,14 +56,15 @@ class Solution(object):
             elif tmp.startswith("M"):
                 answer += 1000
                 tmp = tmp[1:]
-        
+
         return answer
+
 
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
         self.solution = Solution()
-    
+
     def tearDown(self):
         pass
 
@@ -74,6 +76,7 @@ class TestSolution(unittest.TestCase):
 
     def test_case_3(self):
         self.assertEqual(self.solution.romanToInt("XCIX"), 99)
+
 
 if __name__ == '__main__':
     unittest.main()
