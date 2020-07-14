@@ -10,26 +10,26 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        target = list()
+        answer = list()
 
         if root is not None:
-            self.__traverse(root, target)
+            self.__traverse(root, answer)
 
-        return target
+        return answer
 
-    def __traverse(self, node,  target):
+    def __traverse(self, node,  answer):
         """
         :type node: TreeNode
-        :type target: List[int]
+        :type answer: List[int]
         :rtype: None
         """
         if node.left is not None:
-            self.__traverse(node.left, target)
+            self.__traverse(node.left, answer)
 
         if node.right is not None:
-            self.__traverse(node.right, target)
+            self.__traverse(node.right, answer)
 
-        target.append(node.val)
+        answer.append(node.val)
 
 
 class TestSolution(unittest.TestCase):
