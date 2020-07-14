@@ -1,10 +1,10 @@
 # https://leetcode.com/problems/insert-interval/
 
 import unittest
-from ...leetcode_intervals import overlap
+from ...leetcode_intervals import IntervalQuestions
 
 
-class Solution(object):
+class Solution(IntervalQuestions):
     def insert(self, intervals, newInterval):
         """
         :type intervals: List[List[int]]
@@ -35,7 +35,7 @@ class Solution(object):
 
             for i in intervals:
 
-                if overlap(i, newInterval):
+                if self.overlap(i, newInterval):
 
                     if i[0] < newInterval[0]:
                         newInterval[0] = i[0]
