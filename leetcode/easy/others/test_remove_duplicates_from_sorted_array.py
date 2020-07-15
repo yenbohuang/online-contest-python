@@ -1,7 +1,6 @@
 # https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 import unittest
-import os
 import json
 
 
@@ -42,7 +41,7 @@ class TestSolution(unittest.TestCase):
 
     def test_case_3(self):
 
-        filepath = os.path.abspath(".") + "/leetcode/easy/others/" \
+        filepath = "./leetcode/easy/others/" \
             + "test_remove_duplicates_from_sorted_array_case3.json"
 
         testData = None

@@ -1,7 +1,6 @@
 # https://leetcode.com/problems/add-binary/
 
 import unittest
-import os
 import json
 
 
@@ -45,15 +44,15 @@ class TestSolution(unittest.TestCase):
 
     def test_case_2(self):
 
-        filepath = os.path.abspath(".") + "/leetcode/easy/others/" \
-            + "test_add_binary_case2.json"
+        filepath = "./leetcode/easy/others/test_add_binary_case2.json"
 
         testData = None
         with open(filepath, "rt") as fout:
             testData = json.loads(fout.read())
 
         self.assertEqual(
-            self.solution.addBinary(testData["a"], testData["b"]), testData["answer"])
+            self.solution.addBinary(testData["a"], testData["b"]),
+            testData["answer"])
 
 
 if __name__ == '__main__':
