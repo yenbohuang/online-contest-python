@@ -15,7 +15,7 @@ class Solution(IntervalQuestions):
         intervalLength = 0
         if intervals is not None:
             intervalLength = len(intervals)
-        
+
         if intervalLength == 0:
             return list(list())
         elif intervalLength < 2:
