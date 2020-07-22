@@ -14,31 +14,31 @@ class Solution(object):
         if grid is None or len(grid) == 0:
             return 0
 
-        width = len(grid[0])
-        height = len(grid)
+        numOfColumns = len(grid[0])
+        numOfRows = len(grid)
 
-        dynamicProgramming = [[0] * width for i in range(height)]
-        dynamicProgramming[0][0] = grid[0][0]
+        dp = [[0] * numOfColumns for i in range(numOfRows)]
+        dp[0][0] = grid[0][0]
 
         # initialize top row
-        for i in range(1, width):
-            dynamicProgramming[0][i] = dynamicProgramming[0][i - 1] + grid[0][i]
+        for i in range(1, numOfColumns):
+            dp[0][i] = dp[0][i - 1] + grid[0][i]
 
         # initialize left column
-        for j in range(1, height):
-            dynamicProgramming[j][0] = dynamicProgramming[j - 1][0] + grid[j][0]
+        for j in range(1, numOfRows):
+            dp[j][0] = dp[j - 1][0] + grid[j][0]
 
         # fill up the dynamic programming table
-        for i in range(1, height):
+        for i in range(1, numOfRows):
 
-            for j in range(1, width):
+            for j in range(1, numOfColumns):
 
-                if dynamicProgramming[i-1][j] > dynamicProgramming[i][j-1]:
-                    dynamicProgramming[i][j] = dynamicProgramming[i][j-1] + grid[i][j]
+                if dp[i - 1][j] > dp[i][j - 1]:
+                    dp[i][j] = dp[i][j - 1] + grid[i][j]
                 else:
-                    dynamicProgramming[i][j] = dynamicProgramming[i-1][j] + grid[i][j]
+                    dp[i][j] = dp[i - 1][j] + grid[i][j]
 
-        return dynamicProgramming[height-1][width-1]
+        return dp[numOfRows - 1][numOfColumns - 1]
 
 
 class TestSolution(unittest.TestCase):
